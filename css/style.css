@@ -1,0 +1,105 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.scroll-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.slide:nth-child(odd) {
+  background-color: #3435ff;
+}
+
+.slide:nth-child(even) {
+  background-color: #2B2B38;
+}
+
+.content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 110px;
+  text-align: center;
+}
+
+.content .block {
+  width: inherit;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 42px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content .block span, 
+.content .block span i {
+  margin: 0 42px;
+}
+
+.content .block span i {
+  margin-bottom: 22px;
+}
+
+.content .block span i:before {
+  font-size: 30px;
+}
+
+.icon {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon i {
+  font-size: 12px;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: 400;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
